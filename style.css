@@ -1,0 +1,820 @@
+body{
+    margin:0;
+    cursor: url('images/download-icon-tool+icon-1320183539869416962_48-fill.png') 8 8, default;
+    background-color:rgb(244, 238, 255) ;
+   
+}
+
+a{
+    cursor: url('images/download-icon-nut+pliers+repair+tongs+tools+tweezers+icon-1320195889782959386_48.png') 8 8, pointer;
+}
+
+
+
+
+/*HEADER SECTION*/
+header{
+    height: 50px;
+    width: 100%;
+    z-index: 100;
+    background-color:rgb(66, 72, 116);
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top:-50px;
+    opacity: 0;
+    transition: top 0.3s ease-in, opacity 0.3s ease-in;
+}
+
+.show-header{
+    top:0px;
+    opacity: 1;
+}
+
+#logo{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+#links{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 25px;
+}
+
+#links > div{
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    height: 100%;
+}
+
+#links > div > a{
+    text-decoration: none;
+    color: rgb(219, 223, 234);
+}
+
+#links > div > img{
+    height: 30px;
+    width: 30px;
+    margin-right: 3px;
+    position: relative;
+    opacity: 0;
+    left: -10px;
+    transition: opacity 0.1s ease-in-out, left 0.3s ease-in-out;
+}
+
+#links > div:hover > img{
+    display: block;
+    height: 30px;
+    width: 30px;
+    margin-right: 3px;
+    opacity: 1;
+    left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*ABOUT PROJECT SECTION*/
+
+
+
+#aboutProject{
+    background-color: rgb(244, 238, 255);
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: column;
+    position: relative;
+}
+
+#aboutProject h1{
+    position: absolute;
+    top: 6%;
+    left: 2%;
+    text-decoration: underline;
+    color: rgb(66,72,116);
+}
+
+#aboutProjectImg{
+    width: 60%;
+}
+
+#aboutProjectImg:hover  img{
+    animation: pickUp 0.5s forwards;
+}
+
+@keyframes pickUp {
+    0%{
+        top:28.5%;
+    }
+    100%{
+        top:26%;
+    }
+}
+
+#aboutProjectImg:not(hover)  img{
+    animation: pullDown 0.5s forwards;
+}
+@keyframes pullDown {
+    0%{
+        top:26%;
+    }
+    100%{
+        top:28.5%;
+    }
+}
+
+.carWithOpenHood{
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top:0px;
+    opacity: 0;
+    left: 1%;
+    z-index: 2;
+    transition: opacity 0.8s ease-in, top 0.8s ease-in;
+}
+
+.carWithOpenHoodClass{
+    top: 17.5%;
+    opacity: 1;
+}
+
+.shadowUnderCarWithOpenHood{
+    width: 500px;
+    height: 50px;
+    position: absolute;
+    top:62%;
+    opacity: 0;
+    left: 1%;
+    z-index: 1;
+    transition: opacity 0.4s ease-in, top 0.4s ease-in;
+}
+
+.shadowUnderCarWithOpenHoodClass{
+    opacity: 1;
+    top: 60%;
+}
+
+
+.aboutProjectText{
+    width: 70%;
+    background-color: rgb(220, 214, 247);
+    border-radius: 30px;
+    color: rgb(66, 72, 116);
+    box-shadow: 0 0 20px rgb(66, 72, 116) ;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    padding: 30px;
+    margin-right: 80px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+}
+
+.aboutProjectTextShow{
+    opacity: 1;
+}
+
+#aboutProjectText > p {
+    text-align: center;
+}
+
+
+
+
+
+
+/*CREW*/
+#crew{
+    background-color:rgb(244, 238, 255) ;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 8%;
+    position: relative;
+
+}
+
+#crew h1{
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    text-decoration: underline;
+    color: rgb(66,72,116);
+}
+
+#listOfMembers{
+    width: 70%;
+    height: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color:rgb(220, 214, 247);
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgb(66, 72, 116);
+    margin-bottom: 50px;
+    padding: 50px;
+}
+
+.theCard{                                                                           /*card*/
+    width: 240px;
+    height: 300px;
+    background-color: rgb(66, 72, 116);
+    color:rgb(244, 238, 255);
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 1px;
+    margin-bottom: 35px;
+    margin-right: 35px;    
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    cursor: url('images/download-icon-nut+pliers+repair+tongs+tools+tweezers+icon-1320195889782959386_48.png') 8 8, pointer;
+}
+
+.theCard img{
+    transition: all 0.5s ease;
+}
+
+.theCard:hover img
+{
+    scale:1.1;
+    box-shadow:0 0 10px rgb(244, 238, 255) ;
+}
+
+.theCard h6{
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.theCard:hover h6{
+    opacity: 0;
+}
+
+.theCard:hover{
+    scale: 1.1;
+    box-shadow: 0 2px 10px rgb(66, 72, 116) ;
+}
+                                                            /*fliping card*/
+.theFlipedCard{
+    transform: rotateY(180deg);
+}
+
+.frontSideOfCard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+}
+
+.backSideOfCard{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(66, 72, 116);
+    border-radius: 10px;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    
+}
+
+.imageInsideCard{
+    height: 170px;
+    width: 170px;
+    border-radius: 50%;
+    border: 6px solid rgb(244, 238, 255);
+}
+
+
+
+
+
+
+
+/*SCHEDULE*/
+#schedule{
+    background-color:rgb(244, 238, 255) ;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+#schedule h1{ 
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    text-decoration: underline;
+    color: rgb(66,72,116);
+}
+
+.timeline{
+    width: 70%;
+
+    padding:100px 0px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#line{
+    content: 'a';
+    width: 4px;
+    height: 0px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    z-index: 2;
+
+    background-color: rgb(66, 72, 116);
+}
+
+.lineAnimation{
+    animation: moving 9s linear forwards;
+}
+
+@keyframes moving {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 96%;
+    }
+    
+}
+
+.dotStart{
+    min-width: 20px;
+    height: 20px;
+    background-color: rgb(66, 72, 116);
+    position: relative;
+    left: 8px;
+    border-radius: 50%;
+
+}
+
+.dotEnd{
+    min-width: 20px;
+    height: 20px;
+    background-color: rgb(66, 72, 116);
+    position: relative;
+    right: 8px;
+    border-radius: 50%;
+}
+
+.timeline div:nth-child(odd){
+    align-self: flex-end;
+}
+
+.timeline div:nth-child(even){
+    align-self: flex-start;
+    text-align: right;
+}
+
+.timeline div:nth-child(odd) .date{
+    position: absolute;
+    transform: translateY(-60px);
+    top: 0px;
+    left: 5%;    
+    background-image:  radial-gradient(circle, rgb(66, 72, 116)0%, rgb(66, 72, 116)100%);
+    box-shadow: 1px 1px 10px  rgb(166, 177, 225);
+    padding: 5px 10px;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.timeline div:nth-child(even) .date{
+    position: absolute;
+    transform: translateY(-60px);
+    top: 0px;
+    right: 5%; 
+    background-image:  radial-gradient(circle, rgb(66, 72, 116)0%, rgb(66, 72, 116)100%);
+    box-shadow: 1px 1px 15px rgba(24, 32, 96, 1);
+    border-radius: 20px 0px 0px 20px;
+}
+
+.timeLineElement{
+    width: 40%;
+    color: rgb(66, 72, 116);
+    background-color:rgb(220, 214, 247);
+    border-radius: 10px;
+    padding: 15px 25px;
+    margin-top: 100px;
+    position: relative;
+    text-shadow:
+    0 0 8px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff;    
+    box-shadow: 0 0 20px rgb(66, 72, 116);
+    opacity: 0;
+}
+
+.timeLineElementAnimation{
+    transition: all 0.3s ease;
+    animation: showUp 1s linear forwards;
+}
+
+@keyframes showUp {
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.timeLineElement:nth-child(3){
+    animation-delay: 1s;
+}
+.timeLineElement:nth-child(4){
+    animation-delay: 2s;
+}
+.timeLineElement:nth-child(5){
+    animation-delay: 3s;
+}
+.timeLineElement:nth-child(6){
+    animation-delay: 4s;
+}
+.timeLineElement:nth-child(7){
+    animation-delay: 5s;
+}
+.timeLineElement:nth-child(8){
+    animation-delay: 6s;
+}
+.timeLineElement:nth-child(9){
+    animation-delay: 7s;
+}
+.timeLineElement:nth-child(10){
+    animation-delay: 8s;
+}
+
+.timeLineElement h3{
+    margin-top: 0;
+    background-color: rgba(220, 214, 247, 0.67);
+    color: rgb(66, 72, 116);
+    text-shadow:
+    0 0 8px #fff,
+    0 0 10px #fff,
+    0 0 15px #fff;
+
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.timeLineElement .date{
+    color: rgb(66, 72, 116);
+    text-shadow:
+    0 0 5px #fff,
+    0 0 13px #fff,
+    0 0 15px #fff;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+    font-size: 22px;
+    padding: 10px;
+    
+    transition: all 0.3s ease;
+}
+
+.timeLineElement .date:hover{
+    scale: 1.1;
+    color: rgb(244, 238, 255);
+    text-shadow:
+    0 0 0px #fff,
+    0 0 0px #fff,
+    0 0 0px #fff;
+}
+
+.neon{
+    scale: 1.1;
+    color: rgb(244, 238, 255) !important;
+    text-shadow:
+    0 0 0px #fff,
+    0 0 0px #fff,
+    0 0 0px #fff !important;
+}
+
+
+
+
+#metting{
+    background: linear-gradient(rgb(244, 238, 255)70%,rgb(66, 72, 116));
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 8%;
+}
+
+#metting>h1{
+    position: absolute;
+    top: 0%;
+    left: 2%;
+    text-decoration: underline;
+    color: rgb(66,72,116);
+}
+
+#board{
+    width: 700px;
+    height: 400px;
+    display: flex;
+    border: 5px solid rgb(54, 0, 124);
+    border-radius: 1px;
+    box-shadow: 2px 4px 10px rgb(123, 82, 177);
+}
+
+button{
+    background: none;
+    border: none;
+    color: rgb(123, 82, 177);
+    font-size: 60px;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background-color:rgba(123, 82, 177,0.5);
+    color:rgb(54, 0, 124);
+    font-size: 70px;
+}
+
+button:active{
+    color: rgb(244, 238, 255);
+    background-color:rgb(54, 0, 124);
+}
+
+#meetingTextSection{
+    width: 80%;
+
+}
+
+#meetingTextSection h1{
+    width: 100%;
+    height: 15%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#meetingTextSection p{
+    width: 100%;
+    height: 85%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: larger;
+}
+
+#previousButton{
+    justify-self: flex-start;
+    width: 10%;
+}
+
+#nextButton{
+    width: 10%;
+    justify-self: flex-end;
+}
+
+footer{
+    background-color: rgb(66,72,116);
+    height: 100px;
+}
+
+
+
+@media screen and (min-width:800px) and (max-width:1250px){
+    #aboutProject{
+        padding-top: 5%;
+        flex-direction: column;
+    }
+
+    #aboutProjectImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .aboutProjectText{
+        width: 80%;
+        margin-top: 10%;
+        margin-right: 0;
+        padding: 0;
+    }
+
+    .carWithOpenHood{
+        position: relative;
+        top: 10%;
+    }
+    .shadowUnderCarWithOpenHood{
+        position: relative;
+        top: 30px;
+
+    }
+}
+
+@media  screen and (min-width:500px) and (max-width:799.90px) {
+    #aboutProject{
+        padding-top: 5%;
+        flex-direction: column;
+    }
+
+    #aboutProjectImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .aboutProjectText{
+        width: 80%;
+        margin-top: 10%;
+        margin-right: 0;
+        padding: 0;
+        text-align: center;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .carWithOpenHood{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        top: 25%;
+    }
+    .shadowUnderCarWithOpenHood{
+        position: relative;
+        top: 20px;
+
+    }
+
+    #crew{
+        padding-top: 15%;
+    }
+
+    .timeline div:nth-child(odd){
+        position: relative;
+        right: -7%;
+    }
+    
+    .timeline div:nth-child(even){
+        position: relative;
+        left: -5%;
+    }
+
+    #board{
+        width: 90%;
+        min-height: 400px;
+    }
+
+    #metting img{
+        width: 400px;
+        height: 230px;
+    }
+}
+
+
+@media  screen and (max-width:499.90px) {
+    #aboutProject{
+        padding-top: 5%;
+        flex-direction: column;
+    }
+
+    #aboutProjectImg{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20%;
+        width: 100%;
+    }
+
+    .aboutProjectText{
+        width: 80%;
+        margin-top: 10%;
+        margin-right: 0;
+        padding: 0;
+        text-align: center;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .carWithOpenHood{
+        position: relative;
+        width: 200px;
+        height: 100px;
+        top: 25%;
+    }
+    .shadowUnderCarWithOpenHood{
+        position: relative;
+        width: 200px;
+        top: 5px;
+
+    }
+
+    #crew{
+        padding-top: 18%;
+    }
+    
+    #metting{
+        padding-top: 10%;
+    }
+
+    #board{
+        width: 90%;
+        min-height: 400px;
+    }
+
+    #metting img{
+        width: 300px;
+        height: 160px;
+    }
+    
+    #metting button{
+        font-size: 40px;
+    }
+
+    .theCard{
+        margin-right: 0px;
+    }
+
+    .timeline{
+        width: 90%;
+    }
+
+    .timeline div{
+        width: 80%;
+        position: relative;
+        left: 5%;
+    }
+
+    .timeline div:nth-child(odd){
+        align-self: center;
+    }
+    
+    .timeline div:nth-child(even){
+        align-self: center;
+        text-align: left;
+    }
+    
+    .timeline div:nth-child(even) .date{
+        position: absolute;
+        transform: translateY(-60px);
+        width: 40%;
+        top: 0px;
+        left: 0%;    
+        background-image:  radial-gradient(circle, rgb(66, 72, 116)0%, rgb(66, 72, 116)100%);
+        box-shadow: 1px 1px 10px  rgb(166, 177, 225);
+        padding: 5px 10px;
+        border-radius: 0px 20px 20px 0px;
+    }
+
+    .timeline div:nth-child(odd) .date{
+        width: 40%;
+        left: 0%;   
+    }
+
+    #line{
+        left: 0%;
+    }
+
+    #links{
+        justify-content: space-between;
+        width: 100%;
+    }
+}
+

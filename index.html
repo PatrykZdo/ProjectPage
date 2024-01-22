@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazyn</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.1/p5.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <header id="header" class="show-header">
+            <img id="logo" src="images/samochodzik.png" alt="logo"/>
+
+            <div id="links">
+                <div>
+                    <img src="images/samochodzik.png" class="zium"/>
+                    <a href="#aboutProject">o Projekcie</a>
+                </div>
+                <div>
+                    <img src="images/samochodzik.png" class="zium"/>
+                    <a href="#crew">Zespół</a>
+                </div>
+                <div>
+                    <img src="images/samochodzik.png" class="zium"/>
+                    <a href="#schedule">Harmonogram</a>
+                </div>
+                <div>
+                    <img src="images/samochodzik.png" class="zium"/>
+                    <a href="#metting">Spotkania</a>
+                </div>
+            </div>
+        </header>
+        <div id="aboutProject">
+            <h1>Projekt</h1>
+                <div id="aboutProjectImg" >
+                    <img src="images/carWithOpenHood.png" class ="carWithOpenHood"alt="Car with open hood" id="carWithOpenHood"/>
+                    <canvas id="shadowUnderCarWithOpenHood"  class="shadowUnderCarWithOpenHood" width="400" height="400"></canvas>
+                </div>
+                <div id="aboutProjectText" class="aboutProjectText">
+                    <h3>Program Magazynowy dla firm złomujących samohody</h3>
+                    <p>W dzisiejszym dynamicznym świecie, obszar magazynowania i zarządzania częściami pochodzącymi z samochodów powypadkowych staje się coraz bardziej złożony i wymagający. W odpowiedzi na tę potrzebę powstał innowacyjny program magazynowy, dedykowany skupom i firmom zajmującym się recyklingiem pojazdów. Poniżej przedstawiamy kluczowe aspekty tego systemu.</p>
+                </div>
+
+        </div>
+        <div id="crew">
+            <h1>Zespół</h1>
+            <div id="listOfMembers">
+                
+                <div id="kamil" class="theCard" onclick="flipCard(this.id)">
+                    <div class="frontSideOfCard">
+                        <h2 id="name">Kamil Piskorski</h2>
+                        <img src="images/card-2.jpg" class="imageInsideCard" alt="profilowe">
+                        <h6>KIEROWNIK</h6>
+                    </div>
+                    <div class="backSideOfCard">
+                        <h2>Opis</h2>
+                        <p>opis naszego wspaniałego użytkownika</p>
+                    </div>
+                </div>
+                
+                <div id="przemek"  class="theCard" onclick="flipCard(this.id)">
+                    <div class="frontSideOfCard">
+                        <h2 id="name">Przemek Wachowski</h2>
+                        <img src="images/card-2.jpg" class="imageInsideCard" alt="profilowe">
+                        <h6>TEN DRUGI</h6>
+                    </div>
+                    <div class="backSideOfCard">
+                        <h2>Opis</h2>
+                        <p>opis naszego wspaniałego użytkownika</p>
+                    </div>
+                </div>
+                
+                <div id="lukasz" class="theCard" onclick="flipCard(this.id)">
+                    <div class="frontSideOfCard">
+                        <h2 id="name">Łukasz Malanowski</h2>
+                        <img src="images/card-2.jpg" class="imageInsideCard" alt="profilowe">
+                    </div>
+                    <div class="backSideOfCard">
+                        <h2>Opis</h2>
+                        <p>opis naszego wspaniałego użytkownika</p>
+                    </div>
+                </div>
+                
+                <div id="daniel" class="theCard" onclick="flipCard(this.id)">
+                    <div class="frontSideOfCard">
+                        <h2 id="name">Szymon Rybiński</h2>
+                        <img src="images/card-2.jpg" class="imageInsideCard" alt="profilowe">
+                    </div>
+                    <div class="backSideOfCard">
+                        <h2>Opis</h2>
+                        <p>opis naszego wspaniałego użytkownika</p>
+                    </div>
+                </div>
+                
+                <div id="patyk" class="theCard" onclick="flipCard(this.id)">
+                    <div class="frontSideOfCard">
+                        <h2 id="name">Daniel Kopaczewski</h2>
+                        <img src="images/card-2.jpg" class="imageInsideCard" alt="profilowe">
+                    </div>
+                    <div class="backSideOfCard">
+                        <h2>Opis</h2>
+                        <p>opis naszego wspaniałego użytkownika</p>
+                    </div>
+                </div>
+                
+                <div id="szymon" class="theCard" onclick="flipCard(this.id)">
+                    <div class="frontSideOfCard">
+                        <h2 id="name">Patryk Zdobiński</h2>
+                        <img src="images/card-2.jpg" class="imageInsideCard" alt="profilowe">
+                    </div>
+                    <div class="backSideOfCard">
+                        <h2>Opis</h2>
+                        <p>opis naszego wspaniałego użytkownika</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <div id="schedule">
+            <h1>Harmonogram</h1>
+            <div class="timeline">
+                <div id="line">
+
+                    <div class="dotStart"></div>
+                    <div class="dotEnd"></div>
+
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Październik</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Listopad</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Grudzień</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Styczeń</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Luty</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Marzec</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Kwiecień</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Maj</span>
+                </div>
+                <div class="timeLineElement">
+                    <h3 class="titleOfJobs">Opis Planu</h3>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
+                    <span class="circle"></span>
+                    <span class="date">Czerwiec</span>
+                </div>
+            </div>
+        </div>  
+
+
+
+
+        <div id="metting">
+            <h1>Spotkania</h1>
+            <div id="board">
+                <button id="previousButton"><</button>
+                <div id="meetingTextSection">
+                    <h1 id="dateOfMeeting">Data Spotkania</h1>
+                    <p id="shortcutOfMeeting">co ustaliliśmy danego dnia </p>
+                </div>
+                <button id="nextButton">></button>
+            </div>
+            <img src="images/ludzie1.png" alt="siema"/>
+        </div>   
+        
+        
+        <footer id="footer">
+
+        </footer>
+
+
+    </div>
+    <script src="index.js"></script>
+    
+</body>
+</html>
