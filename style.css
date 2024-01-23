@@ -294,6 +294,7 @@ header{
     border-radius: 10px;
     backface-visibility: hidden;
     transform: rotateY(180deg);
+    padding-inline: 15px;
     
 }
 
